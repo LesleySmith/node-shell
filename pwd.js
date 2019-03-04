@@ -1,15 +1,7 @@
-const pwd = process.cwd();
 
-module.exports = err => {
-  if (err) {
-    return `error`;
-  } else {
-    return pwd;
-  }
-};
+const cwd = process.cwd();
 
-// if (err) {
-//     console.log('sad day there was an error');
-//   } else {
-//     return pwd;
-//   }
+module.exports = function () {
+  process.stdout.write(cwd);
+  process.stdout.write('\nprompt > ');
+}
